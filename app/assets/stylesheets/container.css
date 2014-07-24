@@ -59,3 +59,7 @@ label {
   cursor: pointer;
   color: #1371bb;
 }
+
+#account-container {
+  width: 100%;
+}

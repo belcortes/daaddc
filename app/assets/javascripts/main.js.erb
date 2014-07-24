@@ -8,7 +8,7 @@ function maps() {
     geocoder = new google.maps.Geocoder();
     var mapOptions = {
       center: new google.maps.LatLng(40.654266, -96.995427),
-      zoom: 5,
+      zoom: 4,
       mapTypeId: google.maps.MapTypeId.SATELLITE,
       mapTypeControlOptions: {
         style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
@@ -112,6 +112,16 @@ function maps() {
       url:"https://dl.dropboxusercontent.com/u/22757148/SFSkills_FirstAid_UserLayer.kml",
     });
 
+    var air_quality = new google.maps.KmlLayer({
+      url:"https://dl.dropboxusercontent.com/u/22757148/AirQualityNetworked.kml",
+    });
+
+    var evac = new google.maps.KmlLayer({
+      url:"https://dl.dropboxusercontent.com/u/22757148/DC_Evac_Layer3.kml",
+    });
+    
+
+    
     var weatherLayer = new google.maps.weather.WeatherLayer({
       temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
     });
@@ -124,6 +134,10 @@ function maps() {
     weatherLayer.setMap(map);
 
     cloudLayer.setMap(map);
+
+    air_quality.setMap(map);
+
+    air_quality.set('preserveViewport', true);
     
 
 
@@ -348,7 +362,7 @@ function user_data() {
 
   $.getJSON("/users", function(json) {
     $.each(json, function(key, data) {
-      
+
       var contentInfo = ("Name:"+" "+data.name+"</br>"+"Address:"+" "+data.address+"</br>"+"<div style='color:blue;'>Contact this owner</div>")
       // if (data.name == user) {
       //   icon = "<%= asset_path 'me.png' %>"

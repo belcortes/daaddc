@@ -54,29 +54,29 @@
    
   / %a(href='#')
   /   .map-buttons#disaster SF Zipcodes
-  .dropdown
-    %a.dropdown-toggle.map-buttons#busi{"data-toggle" => "dropdown"}(href='#')
-      San Francisco
-      %b.caret
-    %ul#menu2.dropdown-menu
-      %li
-        %input.checkbox#zip-check{type: "checkbox"} Zipcodes
-      %li
-        %input.checkbox#neighbor-check{type: "checkbox"} Neighborhoods
+  / .dropdown
+  /   %a.dropdown-toggle.map-buttons#busi{"data-toggle" => "dropdown"}(href='#')
+  /     San Francisco
+  /     %b.caret
+  /   %ul#menu2.dropdown-menu
+  /     %li
+  /       %input.checkbox#zip-check{type: "checkbox"} Zipcodes
+  /     %li
+  /       %input.checkbox#neighbor-check{type: "checkbox"} Neighborhoods
   %a(href='#')
     .map-buttons#disaster Resiliency
   #heat HEAT WARNING
-  .dropdown
-    %a.dropdown-toggle.map-buttons#neighbor{"data-toggle" => "dropdown"}(href='#')
-      Resources
-      %b.caret
-    %ul#menu3.dropdown-menu
-      %li
-        %input.checkbox#sf-police{type: "checkbox"} Police
-      %li
-        %input.checkbox#sf-fire{type: "checkbox"} Fire
-      %li
-        %input.checkbox#sf-hosp{type: "checkbox"} Hospitals
+  / .dropdown
+  /   %a.dropdown-toggle.map-buttons#neighbor{"data-toggle" => "dropdown"}(href='#')
+  /     Resources
+  /     %b.caret
+  /   %ul#menu3.dropdown-menu
+  /     %li
+  /       %input.checkbox#sf-police{type: "checkbox"} Police
+  /     %li
+  /       %input.checkbox#sf-fire{type: "checkbox"} Fire
+  /     %li
+  /       %input.checkbox#sf-hosp{type: "checkbox"} Hospitals
 
   .dropdown
     %a.dropdown-toggle.map-buttons#dc-resources{"data-toggle" => "dropdown"}(href='#')
@@ -93,17 +93,10 @@
         %input.checkbox#cooling{type: "checkbox"} Cooling Centers
   / %a(href='#')
   /   .map-buttons#resources DC - Cooling Centers
+  #heatmap
+    %button Heatmap
   %a(href='#')
     .map-buttons#community Community Resources
-  .dropdown
-    %a.dropdown-toggle.map-buttons#sf-eh{"data-toggle" => "dropdown"}(href='#')
-      Environmental Hazards
-      %b.caret
-    %ul#menu4.dropdown-menu
-      %li
-        %input.checkbox#high_liq{type: "checkbox"} Low Liquifaction Level
-      %li
-        %input.checkbox#low_liq{type: "checkbox"} High Liquifaction Level
   .dropdown
     %a.dropdown-toggle.map-buttons#roads{"data-toggle" => "dropdown"}(href='#')
       Environmental Hazards

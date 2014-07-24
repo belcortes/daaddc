@@ -78,6 +78,14 @@
   margin-right: 207px;
   margin-top: 10px;
 }
+#heatmap {
+  position: fixed;
+  right: 0;
+  top: 110px;
+  float: right;
+  margin-right: 470px;
+  margin-top: 10px;
+}
 #hazard {
   position: fixed;
   right: 0;
@@ -113,9 +121,9 @@
 #heat {
   position: fixed;
   right: 0;
-  top: 100px;
+  top: 140px;
   float: right;
-  margin-right: 500px;
+  margin-right: 100px;
   margin-top: 10px;
   color: red;
   font-weight: bolder;

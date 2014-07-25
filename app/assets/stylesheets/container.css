@@ -55,6 +55,14 @@ label {
   margin: 0 auto;
   margin-bottom: 20px;
 }*/
+#resilience-container .height {
+  line-height: 30px;
+}
+
+/*#resilience-container .height span .italic{
+  color: blue;
+}*/
+
 .personal, .resource_links {
   cursor: pointer;
   color: #1371bb;

@@ -119,6 +119,10 @@ function maps() {
     var evac = new google.maps.KmlLayer({
       url:"https://dl.dropboxusercontent.com/u/22757148/DC_Evac_Layer3.kml",
     });
+
+    var texas = new google.maps.KmlLayer({
+      url:"https://dl.dropboxusercontent.com/u/22757148/Demo_Texas_Flood.kml",
+    });
     
 
     
@@ -130,14 +134,17 @@ function maps() {
     
 
     //  ---------------- KML CALLS ---------------- 
-   
+    air_quality.setMap(map);
+
+    air_quality.set('preserveViewport', true);
+
     weatherLayer.setMap(map);
 
     cloudLayer.setMap(map);
 
-    air_quality.setMap(map);
+    // texas.setMap(map);
 
-    air_quality.set('preserveViewport', true);
+    
     
 
 
@@ -174,6 +181,9 @@ function maps() {
             case 'dc-zip':
               zip_kmz.setMap(null);
               break;
+            case 'evac':
+              evac.setMap(null);
+              break;
           }
         } else {
           switch (check_id) {
@@ -190,6 +200,11 @@ function maps() {
             case 'high_flood_kml':
               high_flood_kml.setMap(map);
               // high_flood_kml.set('preserveViewport', true);
+              map.panTo(new google.maps.LatLng(38.857926, -77.029506));
+              map.setZoom(12); 
+              break;
+            case 'evac':
+              evac.setMap(map);
               map.panTo(new google.maps.LatLng(38.857926, -77.029506));
               map.setZoom(12); 
               break;

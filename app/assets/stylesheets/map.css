@@ -130,6 +130,18 @@
   font-size: 30px;
 }
 
+#texas_flood {
+  position: fixed;
+  right: 0;
+  top: 140px;
+  float: right;
+  margin-right: 100px;
+  margin-top: 10px;
+  color: red;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
 .container {
   width: 400px;
   margin-left: 20px !important;
